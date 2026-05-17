@@ -5,21 +5,21 @@
 class Saferm < Formula
   desc "AI-first safe rm replacement"
   homepage "https://github.com/smm-h/saferm"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/smm-h/saferm/releases/download/v0.1.2/saferm_0.1.2_darwin_amd64.tar.gz"
-      sha256 "02ee2ce4e8b2a280b416bad850b9ddbac218bb2bb0f266966ece77972d4e8434"
+      url "https://github.com/smm-h/saferm/releases/download/v0.1.3/saferm_0.1.3_darwin_amd64.tar.gz"
+      sha256 "a1d815779bcc5bd0fcc52b832535feace925c75f22358a47cae37c1d215eb75e"
 
       define_method(:install) do
         bin.install "saferm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/smm-h/saferm/releases/download/v0.1.2/saferm_0.1.2_darwin_arm64.tar.gz"
-      sha256 "0f92d4d5531178caefb32e38ab1e7db5814f2ca253e655f0b6450ad39439bc2d"
+      url "https://github.com/smm-h/saferm/releases/download/v0.1.3/saferm_0.1.3_darwin_arm64.tar.gz"
+      sha256 "395b63ad4ca9d0d7c546473f2b3a5277cb979bc5a8a2d586f36486c022eebad0"
 
       define_method(:install) do
         bin.install "saferm"
@@ -29,15 +29,15 @@ class Saferm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/smm-h/saferm/releases/download/v0.1.2/saferm_0.1.2_linux_amd64.tar.gz"
-      sha256 "cfacde5e3193c8813f988806317b9d100288b6fe1fcab603acc8ae68e7cb00c4"
+      url "https://github.com/smm-h/saferm/releases/download/v0.1.3/saferm_0.1.3_linux_amd64.tar.gz"
+      sha256 "32fee62d4a84218485a003f3e99a728ff2708f111e3702965afaff2cbf9751aa"
       define_method(:install) do
         bin.install "saferm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/smm-h/saferm/releases/download/v0.1.2/saferm_0.1.2_linux_arm64.tar.gz"
-      sha256 "9778a8eb6bc73f744eb8caddf1da9e06c9af1e7f3df9a14452acd70e860a6c1f"
+      url "https://github.com/smm-h/saferm/releases/download/v0.1.3/saferm_0.1.3_linux_arm64.tar.gz"
+      sha256 "01e3a609c5df30b04a872a1ed0badfddaab920a297979783d8cc9a36675f52a3"
       define_method(:install) do
         bin.install "saferm"
       end
